@@ -1,0 +1,11 @@
+.MuiInputBase-root::after {
+  border-bottom-color: #ec5990 !important;
+}
+
+.MuiInputBase-root::before {
+  border-bottom-color: white !important;
+}
+
+.MuiInputBase-root svg {
+  color: white !important;
+}

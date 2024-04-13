@@ -1,0 +1,45 @@
+.MuiInputLabel-standard {
+  font-family: Inter var, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #141414;
+  transform: none !important;
+}
+/* ${required &&
+  css`
+    :after {
+      content: '*';
+      color: #C90000;
+      font-size: 13px;
+      margin-left: 3px;
+    }
+  `} */
+
+.MuiIconButton-root {
+  margin-right: -6px !important;
+}
+
+.MuiInput-input {
+  padding: 10px 0;
+  font-family: Inter var, sans-serif;
+  font-size: 16px !important;
+  color: #fff;
+  font-weight: 400;
+}
+
+.MuiInputAdornment-root {
+  font-size: 16px !important;
+  svg,
+  path {
+    fill: #696969;
+  }
+}
+
+.MuiFormControl-root {
+  background-color: #fff !important;
+}
+
+.MuiScopedCssBaseline-root {
+  width: 100% !important;
+  background-color: transparent !important;
+}
