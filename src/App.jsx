@@ -10,6 +10,19 @@ import {
 import { useEffect, useState } from "react";
 import { Button } from "./components/Button";
 import ScopedCssBaseline from "@mui/material/ScopedCssBaseline";
+import { yupResolver } from "@hookform/resolvers/yup";
+
+import * as yup from "yup";
+
+const formSchema = yup.object().shape({
+  textInput: yup
+    .string()
+    .required()
+    .transform((value) => value.replace(/[bcd]/g, "")),
+  moneyInput: yup.number().required(),
+  dateTimePicker: yup.date().required(),
+  select: yup.string().required(),
+});
 
 function App() {
   const [formData, setFormData] = useState({});
@@ -18,11 +31,15 @@ function App() {
     formState: { errors },
     handleSubmit,
     ...rest
-  } = useForm();
+  } = useForm({
+    resolver: yupResolver(formSchema),
+  });
 
-  useEffect(() => {
-    console.log(formData);
-  }, [formData]);
+  // useEffect(() => {
+  //   console.log({
+  //     formData,
+  //   });
+  // }, [formData]);
 
   return (
     <main className="flex items-center justify-center gap-10 h-screen bg-page">
